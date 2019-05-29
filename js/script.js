@@ -90,10 +90,11 @@ function printQuote () {
   let newColor = getRandomNiceColor();
   document.body.style.backgroundColor = newColor;
   document.getElementById('loadQuote').style.backgroundColor = newColor;
+
+  // quote gets refreshed each 15 seconds by recalling the function again
+  setInterval(printQuote, 15000);
 }
 
 // if loadQuote id button is clicked, the printQuote function is executed
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
-// even if the user doesn't click the loadQuote ID button, quote gets refreshed each 3 seconds
-setInterval(printQuote, 15000);
