@@ -67,24 +67,37 @@ let quotes = [
 
 function getRandomQuote() {
   let randomNumber = Math.random();
-  return array[Math.floor(randomNumber*quotes.length)];
+  return quotes[Math.floor(randomNumber*quotes.length)];
 }
 
+function getRandomNiceColor () {
+  let niceColors = ['#9de19a','#a4c5ea','#bca9e1','#e7eca3','#98a7f2'];
+  let randomColor = Math.floor(Math.random()*niceColors.length);
+  return niceColors[randomColor];
+}
 
 /***
-  Create the `printQuote` function to: 
-   - Call the `getRandomQuote` function and assign it to a variable.
-   - Create a variable for the HTML string and set it equal to an empty string.
-   - Use the HTML template in the instructions or the markup in the index.html file, AND 
-     the random quote vairable to build your HTML string.
-   - Add the quote and source section to the HTML string.
-   - Use an if statement to check for the citation property before adding it to the HTML string.
-   - Use an if statement to check for the year property before adding it to the HTML string.
-   - Don't forget to close that final `p` tag.
-   - Set the `innerHTML` of the `quote-box` div to the HTML string. 
+  printQuote function prints a random quote to the quote-box id div
+  it uses the getRandomQuote function to receive a random quote object
 ***/
+function printQuote () {
+  let object = getRandomQuote();
+  let htmlToPrint = '';
 
+  //  all quotes have quote and source property
+  htmlToPrint += '<p class="quote">' + object.quote + '</p>';
+  htmlToPrint += '<p class="source">' + object.source;
+  
+  // some quotes may have category, citation, year and link
+  // the if verifies if properties are != of null '' or undefined
+  if(object.category) htmlToPrint += '<span class="category"> on ' + object.category + '</span>';
+  if(object.citation) htmlToPrint += '<span class="citation"> ' + object.citation + '</span>';
+  if(object.year) htmlToPrint += '<span class="year"> ' + object.year + '</span>';
+  if(object.link) htmlToPrint += ' <sup><a href="' + object.link + '">more details</a></sup>';
+  htmlToPrint += '</p>';
 
+  document.getElementById('quote-box').innerHTML = htmlToPrint;
+}
 
 
 /***
