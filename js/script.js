@@ -108,4 +108,4 @@ function printQuote () {
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
 // even if the user doesn't click the loadQuote ID button, quote gets refreshed each 3 seconds
-setInterval(printQuote, 3000);
+setInterval(printQuote, 15000);
