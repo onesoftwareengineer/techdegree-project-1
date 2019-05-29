@@ -70,6 +70,7 @@ function getRandomQuote() {
   return quotes[Math.floor(randomNumber*quotes.length)];
 }
 
+//function that returns a random nice color from a pre-defined hex color array
 function getRandomNiceColor () {
   let niceColors = ['#9de19a','#a4c5ea','#bca9e1','#e7eca3','#98a7f2'];
   let randomColor = Math.floor(Math.random()*niceColors.length);
@@ -95,8 +96,10 @@ function printQuote () {
   if(object.year) htmlToPrint += '<span class="year"> ' + object.year + '</span>';
   if(object.link) htmlToPrint += ' <sup><a href="' + object.link + '">more details</a></sup>';
   htmlToPrint += '</p>';
-
   document.getElementById('quote-box').innerHTML = htmlToPrint;
+  
+  //updates background color using getRandomNiceColor function
+  document.body.style.backgroundColor = getRandomNiceColor();
 }
 
 
