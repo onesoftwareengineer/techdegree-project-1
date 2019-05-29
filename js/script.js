@@ -99,18 +99,13 @@ function printQuote () {
   document.getElementById('quote-box').innerHTML = htmlToPrint;
   
   //updates background color using getRandomNiceColor function
-  document.body.style.backgroundColor = getRandomNiceColor();
+  let newColor = getRandomNiceColor();
+  document.body.style.backgroundColor = newColor;
+  document.getElementById('loadQuote').style.backgroundColor = newColor;
 }
 
-
-/***
-  When the "Show another quote" button is clicked, the event listener 
-  below will be triggered, and it will call, or "invoke", the `printQuote` 
-  function. So do not make any changes to the line of code below this 
-  comment.
-***/
-
+// if loadQuote id button is clicked, the printQuote function is executed
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
 
-
-// Remember to delete the comments that came with this file, and replace them with your own code comments.
+// even if the user doesn't click the loadQuote ID button, quote gets refreshed each 3 seconds
+setInterval(printQuote, 3000);
