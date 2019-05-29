@@ -17,15 +17,47 @@ project 1 - A Random Quote Generator
 let quotes = [
   {
     quote: 'I believe that we in the medical profession have taken the wrong course. It is as if we were simply standing by, watching millions of people march over a cliff, and then intervening in a desperate, last-minute attempt to save them once they have fallen over the edge. Instead, we should be teaching them how to avoid the chasm entirely, how to walk parallel to the precipice so that they will never fall at all. I believe that coronary artery disease is preventable, and that even after it is under way, its progress can be stopped, its insidious effects reversed. I believe, and my work over the past twenty years has demonstrated, that all this can be accomplished without expensive mechanical intervention and with minimal use of drugs. The key lies in nutrition—specifically, in abandoning the toxic American diet and maintaining cholesterol levels well below those historically recommended by health policy experts.', 
-    source: 'Caldwell Esselstyn',
-    citation: 'Prevent and Reverse Heart Disease (New York: Penguin, 2007), ch. 1.',
-    year: '',
+    source: 'Dr. Caldwell Esselstyn',
+    citation: 'Prevent and Reverse Heart Disease, ch. 1.',
+    year: '2007',
+    category: 'nutrition',
+    link: 'https://www.dresselstyn.com/site/faq/'
+  },
+  {
+    quote: 'Of all the animals on the planet, people are the only creatures who routinely consume the milk products of other species. What has been assumed to be a beneficial practice is, in fact, more than merely questionable. The scientific evidence suggests that the consequences of this practice are devastating. It appears likely that no other component in the modern diet causes more pain and suffering, including premature death and disability, than dairy products.', 
+    source: 'Dr. Alan Goldhamer',
+    citation: 'No Body Needs Milk',
+    year: '2010',
+    category: 'nutrition',
+    link: 'https://nutritionstudies.org/no-body-needs-milk/'
+  },
+  {
+    quote: 'Fasting is, without any doubt, the most effective biological method of treatment. It is the operation without surgery.', 
+    source: 'Otto Buchinger',
+    citation: 'Das Heilfasten und seine Hilfsmethoden',
+    year: '1935',
+    category: 'fasting',
+    link: 'https://quotes.yourdictionary.com/author/quote/549202'
+  },
+  {
+    quote: 'Fasting is the greatest remedy - the physician within.', 
+    source: 'Philippus Paracelsus',
+    category: 'fasting',
+    link: 'https://www.allaboutfasting.com/fasting-quotes.html'
+  },
+  {
+    quote: 'Nature heals, the doctor helps!', 
+    source: 'Philippus Paracelsus',
     category: 'health',
-    
+    link: 'https://www.allaboutfasting.com/fasting-quotes.html'
+  },
+  {
+    quote: 'Let food be thy medicine and medicine be thy food.', 
+    source: 'Hippocrates',
+    category: 'health',
+    link: 'https://en.wikipedia.org/wiki/Hippocrates'
   },
 ];
-
-
 
 /***
   Create the `getRandomQuote` function to:
@@ -33,7 +65,10 @@ let quotes = [
    - Cse the random number to `return` a random quote object from the `quotes` array.
 ***/
 
-
+function getRandomQuote() {
+  let randomNumber = Math.random();
+  return array[Math.floor(randomNumber*quotes.length)];
+}
 
 
 /***
