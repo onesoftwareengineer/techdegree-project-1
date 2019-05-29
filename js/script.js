@@ -5,15 +5,9 @@ project 1 - A Random Quote Generator
 
 // Study guide for this project - https://drive.google.com/file/d/1s5grutGuQFwJcQP8bFwEI69Q8FCkGdDk/view?usp=sharing
 
-
-/*** 
-  Create the array of quote objects and name it `quotes`.
-  Add at least five quote objects to the `quotes` array.
-  Give each quote object a `quote` and `source` property.
-  Add the `citation` property to at least one object in the array.
-  Add the `year` property to at least one object in the array.
-  Use console.log() to log your array of quotes to the console.
-***/
+// defining arrray of quote objects
+// all quotes have quote and source property
+// some quotes may have category, citation, year and link properties
 let quotes = [
   {
     quote: 'I believe that we in the medical profession have taken the wrong course ... watching millions of people march over a cliff, and then intervening once they have fallen over the edge. Instead, we should be teaching them how to avoid the chasm entirely so that they will never fall at all.', 
@@ -59,12 +53,7 @@ let quotes = [
   },
 ];
 
-/***
-  Create the `getRandomQuote` function to:
-   - Create a variable to store a random number 
-   - Cse the random number to `return` a random quote object from the `quotes` array.
-***/
-
+//function that returns a random object of an array of objects
 function getRandomQuote() {
   let randomNumber = Math.random();
   return quotes[Math.floor(randomNumber*quotes.length)];
@@ -84,20 +73,19 @@ function getRandomNiceColor () {
 function printQuote () {
   let object = getRandomQuote();
   let htmlToPrint = '';
-
-  //  all quotes have quote and source property
   htmlToPrint += '<p class="quote">' + object.quote + '</p>';
   htmlToPrint += '<p class="source">' + object.source;
   
-  // some quotes may have category, citation, year and link
-  // the if verifies if properties are != of null '' or undefined
+  // the if verifies if properties are != of null '' or undefined and displays these properties if so
   if(object.category) htmlToPrint += '<span class="category"> on ' + object.category + '</span>';
   if(object.citation) htmlToPrint += '<span class="citation"> ' + object.citation + '</span>';
   if(object.year) htmlToPrint += '<span class="year"> ' + object.year + '</span>';
   if(object.link) htmlToPrint += ' <sup><a href="' + object.link + '">more details</a></sup>';
   htmlToPrint += '</p>';
-  document.getElementById('quote-box').innerHTML = htmlToPrint;
   
+  //updates the quote-box div
+  document.getElementById('quote-box').innerHTML = htmlToPrint;
+
   //updates background color using getRandomNiceColor function
   let newColor = getRandomNiceColor();
   document.body.style.backgroundColor = newColor;
