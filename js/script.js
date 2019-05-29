@@ -71,6 +71,12 @@ function getRandomNiceColor () {
   it uses the getRandomQuote function to receive a random quote object
 ***/
 function printQuote () {
+
+  //reruns the function after 5 seconds if it's the first time the function was executed
+  if( document.getElementById('quote-box').innerText.indexOf('Every great developer you know got there by') != -1 ) {
+    setInterval(printQuote, 5000);
+  }
+
   let object = getRandomQuote();
   let htmlToPrint = '';
   htmlToPrint += '<p class="quote">' + object.quote + '</p>';
@@ -91,10 +97,7 @@ function printQuote () {
   document.body.style.backgroundColor = newColor;
   document.getElementById('loadQuote').style.backgroundColor = newColor;
 
-  // quote gets refreshed each 15 seconds by recalling the function again
-  setInterval(printQuote, 15000);
 }
 
 // if loadQuote id button is clicked, the printQuote function is executed
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
-
