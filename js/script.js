@@ -50,7 +50,7 @@ let quotes = [
     source: 'Hippocrates',
     category: 'health',
     link: 'https://en.wikipedia.org/wiki/Hippocrates'
-  },
+  }
 ];
 
 //function that returns a random object of an array of objects
