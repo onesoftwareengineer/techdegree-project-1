@@ -72,9 +72,9 @@ function getRandomNiceColor () {
 ***/
 function printQuote () {
 
-  //reruns the function after 5 seconds if it's the first time the function was executed
+  //starts running the function each 20 seconds, triggered only the first time the users presses the loadQuote id button
   if( document.getElementById('quote-box').innerText.indexOf('Every great developer you know got there by') != -1 ) {
-    setInterval(printQuote, 5000);
+    setInterval(printQuote, 20000);
   }
 
   let object = getRandomQuote();
