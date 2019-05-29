@@ -27,7 +27,7 @@ let quotes = [
   },
   {
     quote: 'Fasting is, without any doubt, the most effective biological method of treatment. It is the operation without surgery.', 
-    source: 'Otto Buchinger',
+    source: 'Dr. Otto Buchinger',
     citation: 'Das Heilfasten und seine Hilfsmethoden',
     year: '1935',
     category: 'fasting',
@@ -35,19 +35,19 @@ let quotes = [
   },
   {
     quote: 'Fasting is the greatest remedy - the physician within.', 
-    source: 'Philippus Paracelsus',
+    source: 'Philippus Paracelsus, father of medicine',
     category: 'fasting',
     link: 'https://www.allaboutfasting.com/fasting-quotes.html'
   },
   {
     quote: 'Nature heals, the doctor helps!', 
-    source: 'Philippus Paracelsus',
+    source: 'Philippus Paracelsus, father of medicine',
     category: 'health',
     link: 'https://www.allaboutfasting.com/fasting-quotes.html'
   },
   {
     quote: 'Let food be thy medicine and medicine be thy food.', 
-    source: 'Hippocrates',
+    source: 'Hippocrates, father of medicine',
     category: 'health',
     link: 'https://en.wikipedia.org/wiki/Hippocrates'
   }
