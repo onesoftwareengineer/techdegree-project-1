@@ -14,7 +14,16 @@ project 1 - A Random Quote Generator
   Add the `year` property to at least one object in the array.
   Use console.log() to log your array of quotes to the console.
 ***/
-
+let quotes = [
+  {
+    quote: 'I believe that we in the medical profession have taken the wrong course. It is as if we were simply standing by, watching millions of people march over a cliff, and then intervening in a desperate, last-minute attempt to save them once they have fallen over the edge. Instead, we should be teaching them how to avoid the chasm entirely, how to walk parallel to the precipice so that they will never fall at all. I believe that coronary artery disease is preventable, and that even after it is under way, its progress can be stopped, its insidious effects reversed. I believe, and my work over the past twenty years has demonstrated, that all this can be accomplished without expensive mechanical intervention and with minimal use of drugs. The key lies in nutrition—specifically, in abandoning the toxic American diet and maintaining cholesterol levels well below those historically recommended by health policy experts.', 
+    source: 'Caldwell Esselstyn',
+    citation: 'Prevent and Reverse Heart Disease (New York: Penguin, 2007), ch. 1.',
+    year: '',
+    category: 'health',
+    
+  },
+];
 
 
 
