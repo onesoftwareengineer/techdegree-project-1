@@ -1,4 +1,4 @@
-# Techdegree Project 1 - Random Quote Generator
+# Random Quote Generator
 A program that uses basic JavaScript to display a randomly selected quote each time the user clicks a button.
 
 ## Technologies 
